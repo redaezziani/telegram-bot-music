@@ -8,10 +8,11 @@ const DownloadAndSendAudio = async (url, ctx) => {
         const info = await ytdl.getInfo(url);
         const title = info.videoDetails.title;
         const duration = info.videoDetails.lengthSeconds;
+        const minutes = Math.floor(duration / 60);
         const image = info.videoDetails.thumbnails[0].url;
         const newTitle = replaceSpaceWithDash(title);
         ctx.replyWithPhoto({ url: image });
-        ctx.reply(`مدة الفيديو : ${duration} ثانية`);
+        ctx.reply(`مدة الفيديو : ${minutes} دقيقة`);
         ctx.reply(`اسم الفيديو : ${title}`);
         const filePath = `${newTitle}.mp4`;
 
