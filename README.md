@@ -18,5 +18,5 @@ then enjoy it!
 
 the owner is @the_hybridv
 
-<img src="./image/image.jpg" width="300" height="300" />
+<img src="./image/image.jpg"  height="300" />
 
